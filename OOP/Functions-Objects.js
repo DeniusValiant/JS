@@ -45,3 +45,6 @@ console.log("animal class : " + cat.getClass());
 
 Animal.prototype.getType = function() {return "Predator";};
 console.log("animal type : " + cat.getType());
+
+
+
