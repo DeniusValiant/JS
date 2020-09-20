@@ -10,6 +10,8 @@ function ShowArrayElements(arr)
 // Init
 
 let arr1 = [1,2,3,4,5,6,7,8,9,10];
+let arr2_odd = [1,3,5,7,9];
+let arr3_even = [2,4,6,8,10];
 
 // push/pop
 
@@ -40,5 +42,19 @@ let arr1 = [1,2,3,4,5,6,7,8,9,10];
 //ShowArrayElements(arr1);
 
 // slice
-let arr2 = arr1.slice(2,5);
-ShowArrayElements(arr2);
+//let arr_result = arr1.slice(2,5);
+//ShowArrayElements(arr2);
+
+// concat
+let arr_tmp = [];
+let arr_result =  arr_tmp.concat(arr1, arr2_odd, arr3_even, 12, 13, 14, "1231", 33.44);
+ShowArrayElements(arr_result);
+
+// distinct
+function onlyUnique (value, index, self)
+{
+    return self.indexOf(value) == index;
+}
+
+let arr_result2 = arr_result.filter(onlyUnique);
+ShowArrayElements(arr_result2);
